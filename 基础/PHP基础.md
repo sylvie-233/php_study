@@ -4,7 +4,7 @@
 >
 > Date: 23/1/12
 >
-> Point: P41
+> Point: P58
 
 [TOC]
 
@@ -54,6 +54,7 @@ composer:
     init: 初始化json
     	-n:
     install:
+    	--no-dev:
     licenses:
     	--format:
     list:
@@ -82,35 +83,64 @@ composer:
 
 ```
 {
-	author: [""]
-	authload: {
-		files: []
-		psr-4: {"XXX\\": "src/XXX"}
-	}
+	author: [""],
+	authors: [
+		{
+			name:
+			email:
+			homepage:
+			role:
+		}
+	],
+	autoload: {
+		files: [],
+		"psr-4": {
+			"XXX\\": "src/XXX"
+        },
+		"psr-0": { // 命名空间指定的目录是父级目录（命名空间与当前目录同名，下划线目录拆分多一级）
+		
+		},
+        classmap: { // 生成classmap的php文件列表
+		
+        },
+        "exclude-from-classmap": []
+	},
+	autoload-dev: {
+	
+	},
 	config: {
+        htaccess-protect:
+		process-timeout:
 		sort-packages:
+		use-include-path:
 	}
+    conflict: { // 包版本禁止
+    
+    },
 	description: "",
 	extra: {
 		branch-alias:
 	},
-	homepage: "",
-	keywords: [],
-	license: ""
-	provide: {
+	homepage: "项目网站主页",
+	keywords: [搜索关键字],
+	license: "",
+	prefer-stable: true,
+	provide: { // 登记包可能的依赖
 		
-	}
-	minimum-stability: "stable|"
+	},
+	minimum-stability: "stable|dev|rc|"
 	name: "",
+	replace: {
+	
+	},
 	repositories: {
 		packagist: {
 			type: composer
 			url:
 		}
 	}
-		
 	require: {
-		
+		"php": "^5.5 || ^7.0",
 	}
 	require-dev: {
 		
@@ -120,7 +150,13 @@ composer:
 	}
 	suggest: {
 		
+	},
+	support: {
+		email:
+		source:
+		issues:
 	}
+	time: "发布时间	",
 	type: library|project|metapackage|composer-plugin,
 	version: "",
 }
