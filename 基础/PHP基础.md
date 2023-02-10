@@ -4,7 +4,7 @@
 >
 > Date: 23/1/12
 >
-> Point: P58
+> Point: 
 
 [TOC]
 
@@ -20,6 +20,13 @@ php:
 ```
 
 
+
+### phpize
+
+```
+phpize:
+	
+```
 
 
 
@@ -286,6 +293,7 @@ php:
 
 ```ini
 [PHP]
+
 
 ```
 
