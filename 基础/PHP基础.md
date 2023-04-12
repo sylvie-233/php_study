@@ -287,14 +287,18 @@ php:
 
 
 
-### 配置文件
+### php.ini
 
 配置文件：`php.ini`
 
 ```ini
 [PHP]
 
-
+cgi.fix_pathinfo=0
+memory_limit=256M
+upload_max_filesize=2M
+zlib.output_compression=On
+zlib.output_compression_level=5
 ```
 
 
